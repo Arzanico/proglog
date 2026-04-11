@@ -3,6 +3,11 @@ package server
 import (
 	"context"
 	"flag"
+	"net"
+	"os"
+	"testing"
+	"time"
+
 	"github.com/Arzanico/proglog/internal/auth"
 	"go.opencensus.io/examples/exporter"
 	"go.uber.org/zap"
@@ -10,10 +15,6 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/status"
-	"net"
-	"os"
-	"testing"
-	"time"
 
 	api "github.com/Arzanico/proglog/api/v1"
 	"github.com/Arzanico/proglog/internal/config"
